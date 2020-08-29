@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>FORM</title>
+<link rel="stylesheet" type="text/css" href="snup.css">
+<style>
+
+body {
+	background-image:url("https://www.jobsupportservices.com/wp-content/uploads/2017/07/background-JOBS.jpg");
+    background-size:cover;
+	
+	text-align:center;
+     font-size:24px;
+}
+ .middle {
+	text-align:center;
+}
+h1 {
+	text-align:center;
+	font-size:62px;
+	border-bottom:3px solid rgb(128,128,128);
+}
+h2{
+	color:rgb(128,128,128);
+}
+input {
+  border: 2px solid red;
+  border-radius: 4px;
+  margin:12px;
+  height:25px;
+  font-size:20px;
+}
+   textarea{
+	margin-top:30px;
+ width:40%;
+height: 150px;
+ border: 2px solid black;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size:30px;
+}
+.frm{
+	color:white;
+}
+.btn{
+	float:center;
+	
+	color:white;
+	font-size:16px;
+	background-color:blue;
+	border-radius:5px;
+	width:150px;
+	height:30px;
+	margin-top:50px;
+}
+.blk{
+	color:black;
+}
+
+</style>
+<script type="text/javascript">
+
+function validateLastName (){//checks if last name is valid
+
+	var ln=document.getElementById("lastname").value;
+	var r2= /^[a-zA-Z]\s\'\-']{2,25}$/;
+	if (ln != "")   //if true
+	{
+		alert("last name entered");
+		
+		return true;
+	}
+	else
+	{     
+	alert("please enter something")	;
+		
+		return false();
+	}
+}
+
+	
+	function validateNum()
+	{
+		var n=document.getElementById("phn").value;
+		if (n == ""){
+			document.getElementById("numout").style.color="red";
+			document.getElementById("numout").innerHTML="plss enter something";
+		}
+		else
+		{
+			document.getElementById("numout").style.color="blue";
+			document.getElementById("numout").innerHTML="you entered number:"+n+ " for contact";
+		}
+	}
+	function validateTxt()
+	{
+		var n=document.getElementById("txt").value;
+		if (n == ""){
+			document.getElementById("txtout").style.color="red";
+			document.getElementById("txtout").innerHTML="plss enter something";
+		}
+		else
+		{
+			document.getElementById("txtout").style.color="blue";
+			document.getElementById("txtout").innerHTML="VALID";
+		}
+	}
+
+	</script>
+
+</head>
+
+
+<body>
+
+<h1 class="mid">Dream<span class="job">JoB</span>.COM</h1>
+<h2 class="mid">Sign Up</h2>
+<h3 class="mid">Find your Drean job with us.</h3>
+
+
+<!-- adding image -->
+
+<p class="pmg">HOW TO FIGURE OUT WHAT YOU WANT TO DO: A CAREER CHANGE GUIDE. Lead with Your Strengths. Evaluate Your Past to Avoid a Dead End. Talk to People to Learn What Your Dream Job Is. Take Classes First, 
+Figure Out What Career You Want Later.
+ Consider What Work Environment You Need.</p>
+
+
+
+<!-- CreatinG form with all details -->
+<div class="details">
+<p class="para"> fill all the fields to make a purchase!<p>
+<form  class ="frm" action="response.html" >
+    First Name:<br/>
+   <input type="text" id="firstname" onblur="return validateFirstName();" required />
+   <p id="firstout"></p>
+   Last Name:<br>
+   <input type="text" id="lastname" onblur="return validateLastName();">
+   <p id="lastout"></p>
+   Phone Num:<br/>
+   <input type="number" id="phn" onblur="validateNum();">
+   <p id="numout"></p>
+   Select Your Specialised work!</br>
+     <select class="drop" name="product">
+	  <option value="web" >WEB-Developer</option>
+	  <option value="data_analyst">Data Analyst</option>
+	  <option value="ml">Machine Learning</option>
+      <option value="iot">I.O.T.</option>
+	  <option value="sd">Software Developer</option>
+	  </select><br>
+	
+	
+	  Any Other work that you can perform better !<br>
+	  <input type="radio" name="job"	 value="ms" checked>Management<br>
+	  <input type="radio" name="job" value="google" >Developement<br>
+	  <input type="radio" name="job" value="other">Any Other Work<br>
+	  <div class="blk">
+	Work Experience(in years):
+	<input type="number" name="quantity" min="0" max="30"></br>
+	
+	DATE of Birth!
+	<input type="date" name="date"></br>
+	<p class="quali">.<br>Select all your Qualifications</p>
+	<input type="checkbox"  value="bach">Bachelors</br>
+	<input type="checkbox"  value="ms">Masters</br>
+	<input type="checkbox"  value="dc">Doctrate</br>
+	
+	 Any other queries or things you want to metion it so that
+	 we can find best job for you.<br>
+	<textarea  id="txt" class="feed" onblur="validateTxt();"></textarea></br>
+	<p id="txtout"></p>
+	
+	<!-- Now creatind a button for purchase -->
+	<button class="btn" );">Sign Up</button>
+	</div>
+	</div>
+ </form>
+
+
+
+
+</body>
+
+</html>

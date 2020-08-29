@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>FORM</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script type="text/javascript" src="formvalidation.js"></script>
+
+<style>
+
+body{
+background-color:rgb(211,211,211);
+font-size:20px;
+padding:50px;
+}
+.mid {
+	text-align:center;
+}
+h1 {
+	text-align:center;
+	font-size:62px;
+	border-bottom:3px solid rgb(128,128,128);
+}
+h2{
+	color:rgb(128,128,128);
+}
+.details {
+	text-align:center;
+	padding:10px;
+}
+br{
+	margin-botto:30px;
+
+}
+
+input {
+  border: 2px solid red;
+  border-radius: 4px;
+  margin:12px;
+  height:25px;
+  font-size:20px;
+}
+
+.para
+{
+	color:rgb(169,169,169);
+}
+textarea{
+	margin-top:30px;
+width:40%;
+height: 150px;
+ border: 2px solid red;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size:30px;
+}
+.pay {
+	border: 2px solid white;
+}
+.chase {
+	color:red;
+}
+.drop {
+	margin: 40px;
+}
+
+
+
+.imge{
+	float:left;
+	width:400px;
+	height:300px;
+	margin:10px;
+	border:1px solid black;
+}
+.pmg{
+	font-size:32px;
+	padding:7px;
+	
+	height:305px;
+
+}
+.image{
+	border:5px solid red;
+}
+/* we wiil modify the button now*/
+.btn{
+	float:center;
+	
+	color:white;
+	font-size:16px;
+	background-color:blue;
+	border-radius:5px;
+	width:150px;
+	height:30px;
+	margin-top:50px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function validateLastName (){//checks if last name is valid
+
+	var ln=document.getElementById("lastname").value;
+	var r2= /^[a-zA-Z]\s\'\-']{2,25}$/;
+	if (ln != "")   //if true
+	{
+		alert("last name entered");
+		
+		return true;
+	}
+	else
+	{     
+	alert("please enter something")	;
+		
+		return false();
+	}
+}
+
+	
+	function validateNum()
+	{
+		var n=document.getElementById("phn").value;
+		if (n == ""){
+			document.getElementById("numout").style.color="red";
+			document.getElementById("numout").innerHTML="plss enter something";
+		}
+		else
+		{
+			document.getElementById("numout").style.color="blue";
+			document.getElementById("numout").innerHTML="you entered number:"+n+ " for contact";
+		}
+	}
+	function validateTxt()
+	{
+		var n=document.getElementById("txt").value;
+		if (n == ""){
+			document.getElementById("txtout").style.color="red";
+			document.getElementById("txtout").innerHTML="plss enter something";
+		}
+		else
+		{
+			document.getElementById("txtout").style.color="blue";
+			document.getElementById("txtout").innerHTML="VALID";
+		}
+	}
+
+	</script>
+</head>
+
+
+<body>
+
+<h1 class="mid">BULKPUR<span class="chase">CHASE</span>.COM</h1>
+<h2 class="mid">Here you can purchase the mentioned items on bulk or solo as per your need</h2>
+<div class="silly">
+<div class="image">
+<!-- adding image -->
+<img class="imge" src="https://lh3.googleusercontent.com/proxy/qf8Ub1xP5YrJiSgKqwKDeRAGu2TMDlPBoItm8mUIeIx40wMXvJxq6TMIgk3gTxRoSmnEDCOArrk4FRF5PuWPvnF-vq350RQDS-95QwyonmWV893WJimVJevBUnur7OAsxLwFjiQLXsM">
+<p class="pmg">Bulkpurchase in one of the best place to buy gadgets. All you need to select is
+the product you want ,its quantity and your desired colour etc. We try to deliver products 
+as soon as possible. Payments will be done on your choice of pay. We accept all types of payments:-Cash,cheque or Online.
+Please Submit a review if you made a purchase with us earlier, or you can give suggestions also
+if you have any .</p>
+</div>
+</div>
+
+<!-- CreatinG form with all details -->
+<div class="details">
+<p class="para"> fill all the fields to make a purchase!<p>
+<form  action="response.html" >
+    First Name:<br/>
+   <input type="text" id="firstname" onblur="return validateFirstName();" required />
+   <p id="firstout"></p>
+   Last Name:<br>
+   <input type="text" id="lastname" onblur="return validateLastName();">
+   <p id="lastout"></p>
+   Phone Num:<br/>
+   <input type="number" id="phn" onblur="validateNum();">
+   <p id="numout"></p>
+   Select a product you want to purchase from Drop-down list !</br>
+     <select class="drop" name="product">
+	  <option value="television">TV</option>
+	  <option value="watch">Watch</option>
+	  <option value="phone">Mobile-pho</option>
+      <option value="speaker">Speaker</option>
+	  <option value="Battery">Battery</option>
+	  </select><br>
+	
+	
+	  Select Brand you want !<br>
+	  <input type="radio" name="brand" value="Sony" checked>Sony <br>
+	  <input type="radio" name="brand" value="Samsung" checked>Samsung <br>
+	  <input type="radio" name="brand" value="LG" checked>LG<br>
+	Select Quantity:
+	<input type="number" name="quantity" min="1" max="30"></br>
+	Select Color:<br>
+	<input type="color" name="color"></br>
+	DATE till you want to receive Order!
+	<input type="date" name="date"></br>
+	<p class="pay">Modes that will be suitable for 
+	payment(check all in which you are comfortable) !<br>
+	Payments will be Done according to your choice.<br></p>
+	<input type="checkbox" name="pay" value="Cash">Cash</br>
+	<input type="checkbox" name="pay" value="Check">Cheque</br>
+	<input type="checkbox" name="pay" value="Online">Online</br>
+	
+	Any Past purchases With Us.You can give your feedback,suggestions or queries with us.<br>
+	<textarea  id="txt" class="feed" onblur="validateTxt();"></textarea></br>
+	<p id="txtout"></p>
+	
+	<!-- Now creatind a button for purchase -->
+	<button class="btn" );">Purchase</button>
+	</div>
+ </form>
+
+
+
+
+</body>
+
+</html>

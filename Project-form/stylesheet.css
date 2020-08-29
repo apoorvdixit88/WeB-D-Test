@@ -1,0 +1,87 @@
+body{
+background-color:rgb(211,211,211);
+font-size:20px;
+padding:50px;
+}
+.mid {
+	text-align:center;
+}
+h1 {
+	text-align:center;
+	font-size:62px;
+	border-bottom:3px solid rgb(128,128,128);
+}
+h2{
+	color:rgb(128,128,128);
+}
+.details {
+	text-align:center;
+	padding:10px;
+}
+br{
+	margin-botto:30px;
+
+}
+
+input {
+  border: 2px solid red;
+  border-radius: 4px;
+  margin:12px;
+  height:25px;
+  font-size:20px;
+}
+
+.para
+{
+	color:rgb(169,169,169);
+}
+textarea{
+	margin-top:30px;
+width:40%;
+height: 150px;
+ border: 2px solid red;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size:30px;
+}
+.pay {
+	border: 2px solid white;
+}
+.chase {
+	color:red;
+}
+.drop {
+	margin: 40px;
+}
+
+
+
+.imge{
+	float:left;
+	width:400px;
+	height:300px;
+	margin:10px;
+	border:1px solid black;
+}
+.pmg{
+	font-size:32px;
+	padding:7px;
+	
+	height:305px;
+
+}
+.image{
+	border:5px solid red;
+}
+/* we wiil modify the button now*/
+.btn{
+	float:center;
+	
+	color:white;
+	font-size:16px;
+	background-color:blue;
+	border-radius:5px;
+	width:150px;
+	height:30px;
+	margin-top:50px;
+}
